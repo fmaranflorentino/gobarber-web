@@ -5,11 +5,15 @@ import { Form, Input } from '@rocketseat/unform';
 import logo from '~/assets/img/logo.svg';
 
 export default function SignIn() {
+  function handleSubmit(data) {
+    console.tron.log(data);
+  }
+
   return (
     <>
       <img src={logo} alt="GoBarber" />
 
-      <Form>
+      <Form onSubmit={handleSubmit}>
         <Input name="email" type="emai" placeholder="Seu e-mail" />
         <Input
           name="password"
